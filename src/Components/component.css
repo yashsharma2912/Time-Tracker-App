@@ -1,0 +1,148 @@
+/* common css */
+button{
+    background-color: black;
+    color: white;
+    padding: 0.5vw 1.5vw ;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+/* css for timerCount */
+.timerBox{
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    .timeCounter{
+        padding: 2vw 0;
+        display: flex;
+        justify-content: center;
+        font-size: 4vw;
+    }
+    .btngroup{
+         display: flex;
+         gap: 1vw;
+         button{
+            width: 7vw;
+            height: 3.5vw;
+            font-size: 1.3vw;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+         }
+    }
+    .modleContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2vw;
+        margin-top: 2vw;
+        position: relative;
+        height: fit-content;
+        padding: 1vw 4vw;
+        border-radius: 5px;
+        border: 1px solid lightgray;
+        input{
+            padding: 0.3vw 0.5vw;
+            width: 15vw;
+            height: 2.8vw;
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .closebtn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2vw;
+                height: 2vw;
+                font-size: 2.5vw;
+                font-weight: 400;
+                cursor: pointer;
+                background-color: black;
+                color: white;
+                border-radius: 50%;
+            }
+        }
+       .modlebtns{
+        display: flex;
+        justify-content: center;
+        gap: 0.5vw;
+        button{
+            background-color: black;
+            color: white;
+            padding: 0.5vw 1.5vw ;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+       }
+    }
+}
+/* css for Tasks body  */
+.taskBox{
+    overflow-y: scroll;
+    padding: 3vw;
+    border-radius: 5px;
+    height: fit-content;
+    border: 1px solid lightgray;
+    margin-top: 1vw;
+    display: flex; 
+    align-items: center;
+    gap: 2.5vw;
+    .taskItem{
+        margin-top: 1vw;
+        border: 1px solid lightgray;
+        padding: 2vw;
+        border-radius: 20vw;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+    }
+    .taskInfo{
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+        h5,p{
+            font-weight: 400;
+            font-size: 1.2vw;
+        }
+    }
+    .modle{
+        .modleContainer{
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            gap: 1vw;
+            border: 1px solid lightgray;
+            input{
+                padding: 0.4vw 3vw;
+            }
+            .btngrp{
+                display: flex;
+                gap: 0.3vw;
+                justify-content: center;
+            }
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .close-btn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2vw;
+                height: 2vw;
+                font-size: 2.5vw;
+                font-weight: 400;
+                cursor: pointer;
+                background-color: black;
+                color: white;
+                border-radius: 50%;
+            }
+        }
+    }
+}

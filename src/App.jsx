@@ -1,16 +1,33 @@
 import { useState } from 'react'
 import './App.css'
-import Timer from './Components/Timer'
+
+//Reusable Components
 import Tasks from './Components/Tasks'
+import TimerCount from './Components/TimerCount'
 
 function App() {
-  const [count, setCount] = useState(0)
+   const[tasks,setTasks] = useState([]);
+
+   //add task function
+   const addTask = (task) => {
+     setTasks([...tasks,task]);
+   };
+
+   // function for updating tasks 
+   const updateTask = (index, updatedTask ) => {
+      const updatedTasks = tasks.map((task,i) => (i === index ? updatedTask : task));
+      setTasks(updatedTasks);
+   };
 
   return (
     <>
-      <h1> Time Tracking App</h1>
-      <Timer/>
-      <Tasks/>
+    <div className="app">
+    <div className="container">
+      <h1>Time Tracking App</h1>
+        <TimerCount addTask={addTask}/>
+        <Tasks tasks={tasks} updateTask={updateTask}/>
+    </div>
+    </div>
     </>
   )
 }
